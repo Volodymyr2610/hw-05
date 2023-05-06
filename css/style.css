@@ -596,9 +596,6 @@ footer {
   margin-bottom: 8px;
 }
 
-.progect-item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .progect-descr {
   font-size: 16px;
@@ -622,6 +619,8 @@ footer {
 
 .progect-card {
   display: block;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .progect-card:hover,
