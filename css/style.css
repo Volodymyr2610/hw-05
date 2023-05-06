@@ -112,19 +112,31 @@ body {
 }
 
 .nav-link {
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text-header);
-
   padding: 24px 0;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: var(--nav-color-acctive);
+  transition: var(--transition-timing-function);
+}
+
+.curent::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: var(--nav-color-acctive);
 }
 
 .header-item:not(:last-child) {
@@ -151,6 +163,7 @@ body {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--nav-color-acctive);
+  transition: var(--transition-timing-function);
 }
 
 /* Hero section */
@@ -215,6 +228,7 @@ body {
 .booking-btn:hover,
 .booking-btn:focus {
   background-color: var(--nav-color-acctive);
+  transition: var(--transition-timing-function);
 }
 
 h1 {
@@ -368,9 +382,11 @@ a {
 
 .social-link:hover {
   background-color: #404bbf;
+  transition: var(--transition-timing-function);
 }
 .social-link:focus {
   background-color: #404bbf;
+  transition: var(--transition-timing-function);
 }
 
 .social-icon {
@@ -510,6 +526,7 @@ footer {
 .social-fut:hover,
 .social-fut:focus {
   background-color: #31d0aa;
+  transition: var(--transition-timing-function);
 }
 /**PORTFOLIO**/
 
@@ -548,6 +565,7 @@ footer {
   border: 1px solid transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: var(--transition-timing-function);
 }
 
 .button {
@@ -593,6 +611,7 @@ footer {
 .progect-card:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: var(--transition-timing-function);
 }
 
 .card-overlay {
@@ -638,16 +657,27 @@ footer {
   transition: var(--transition-timing-function);
 }
 
-.backdrop .is-hidden .modal {
+.backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.backdrop .is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
 .btn-close {
-  fill: #f4f4fd;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #E7E9FC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: #404BBF;
+  fill: #FFFFFF;
+
 }
