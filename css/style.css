@@ -120,6 +120,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-header);
   padding: 24px 0;
+
+  color: #404bbf;
+  transition: var(--transition-timing-function);
 }
 
 .nav-link:hover,
@@ -147,6 +150,8 @@ body {
   margin-left: auto;
   align-items: center;
   font-style: normal;
+
+  transition: var(--transition-timing-function);
 }
 
 .contact-item:not(:last-child) {
@@ -223,6 +228,8 @@ body {
   padding: 16px;
   gap: 10px;
   border-radius: 4px;
+
+  transition: var(--transition-timing-function);
 }
 
 .booking-btn:hover,
@@ -266,9 +273,6 @@ a {
   height: 64;
 }
 
-.advantages-list:not(:first-child) {
-  /* margin-left: 24px; */
-}
 
 .advantage-item {
   flex-wrap: wrap;
@@ -323,8 +327,6 @@ a {
 
 .team-members {
   gap: 24px;
-
-  /* width: calc((100%-72px) / 4); */
   display: flex;
 }
 
@@ -367,6 +369,8 @@ a {
 .socials-item {
   width: 40px;
   height: 40px;
+
+  transition: var(--transition-timing-function);
 }
 
 .social-link {
@@ -430,7 +434,8 @@ a {
   /* padding: 16px 32px; */
   height: 88px;
   width: calc((100% - 120px) / 6);
- 
+
+  transition: var(--transition-timing-function);
 }
 
 .custom-icon:focus {
@@ -498,7 +503,6 @@ footer {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  /* text-align: center; */
   letter-spacing: 0.02em;
   color: var(--white-text);
   margin-bottom: 16px;
@@ -642,7 +646,18 @@ footer {
 }
 
 /**MODAL**/
-.backdrop .modal {
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+ .modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -668,16 +683,29 @@ footer {
 }
 
 .btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
   background-color: #E7E9FC;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .btn-close:hover,
 .btn-close:focus {
   background-color: #404BBF;
   fill: #FFFFFF;
+  border: none;
+}
 
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
